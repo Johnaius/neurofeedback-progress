@@ -1,11 +1,9 @@
 const express = require('express')
 const app = express()
 const cors = require('cors');
-const { MongoClient } = require('mongodb');
-const { sendFile } = require('express/lib/response');
+const MongoClient = require('mongodb').MongoClient
+const PORT = 2121
 require('dotenv').config()
-
-const PORT = process.env.PORT || 8000
 
 let db,
     dbConnectionStr = process.env.DB_STRING,
